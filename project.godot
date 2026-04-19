@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="VDesktopPet"
+run/main_scene="uid://cu8h8cvle2qnr"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 

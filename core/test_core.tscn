@@ -1,9 +1,13 @@
 [gd_scene format=3 uid="uid://cu8h8cvle2qnr"]
 
 [ext_resource type="Script" uid="uid://vb1ar7lcsq18" path="res://core/data/pet_stats.gd" id="1_o0330"]
+[ext_resource type="Script" uid="uid://dj8f8p1hojo1a" path="res://core/ui/window_setup.gd" id="2_xvfk3"]
 
 [node name="Node2D" type="Node2D" unique_id=942112108 groups=["Pet"]]
 script = ExtResource("1_o0330")
+
+[node name="WindowSetup" type="Node" parent="." unique_id=63526624]
+script = ExtResource("2_xvfk3")
 
 [node name="DrainTimer" type="Timer" parent="." unique_id=104643030]
 autostart = true

@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://cj20cp4rkpfpr"]
+
+[ext_resource type="Texture2D" uid="uid://dac5dapxrukm2" path="res://icon.svg" id="1_16tf3"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qyopi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_16tf3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_io7gx"]
+radius = 5.0
+height = 16.0
+
+[node name="Area2D" type="Area2D" unique_id=843930035]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2118960658]
+scale = Vector2(0.11914063, 0.125)
+sprite_frames = SubResource("SpriteFrames_qyopi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1329236587]
+shape = SubResource("CapsuleShape2D_io7gx")

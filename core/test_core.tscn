@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://crce0a3fgyx3v"]
+
+[ext_resource type="Script" uid="uid://vb1ar7lcsq18" path="res://core/data/pet_stats.gd" id="1_o0330"]
+
+[node name="Node2D" type="Node2D" unique_id=942112108 groups=["Pet"]]
+script = ExtResource("1_o0330")
+
+[node name="DrainTimer" type="Timer" parent="." unique_id=104643030]
+autostart = true
+script = ExtResource("1_o0330")
+
+[connection signal="timeout" from="DrainTimer" to="." method="_on_drain_timer_timeout"]

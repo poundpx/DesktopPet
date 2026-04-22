@@ -3,10 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dac5dapxrukm2" path="res://icon.svg" id="1_16tf3"]
 [ext_resource type="Script" uid="uid://bf0tmwqrw0ih2" path="res://core/Scripts/vpet.gd" id="1_io7gx"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_io7gx"]
-size = Vector2(10, 14)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_qyopi"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_16tf3"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -17,13 +14,18 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_io7gx"]
+size = Vector2(59, 96)
+
 [node name="Area2D" type="Area2D" unique_id=843930035]
 script = ExtResource("1_io7gx")
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2118960658]
+position = Vector2(4.7683716e-07, -1.9073486e-06)
+scale = Vector2(0.65625006, 0.75)
+sprite_frames = SubResource("SpriteFrames_16tf3")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1329236587]
 unique_name_in_owner = true
+position = Vector2(0.5, 0)
 shape = SubResource("RectangleShape2D_io7gx")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2118960658]
-scale = Vector2(0.11914063, 0.125)
-sprite_frames = SubResource("SpriteFrames_qyopi")

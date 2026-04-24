@@ -11,8 +11,7 @@ script = ExtResource("1_o0330")
 script = ExtResource("2_xvfk3")
 
 [node name="Area2D" parent="." unique_id=843930035 instance=ExtResource("2_20u4g")]
-unique_name_in_owner = true
-position = Vector2(215, 145)
+position = Vector2(-1, 1)
 
 [node name="DrainTimer" type="Timer" parent="." unique_id=104643030]
 autostart = true

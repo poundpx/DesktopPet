@@ -14,8 +14,8 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	#Mouse passthrough transparent window logic
-	var hitbox_size = %CollisionShape2D.shape.size
-	var hitbox_array = [position + Vector2(-hitbox_size.x/2, -hitbox_size.y/2), position + Vector2(hitbox_size.x/2, -hitbox_size.y/2), position + Vector2(-hitbox_size.x/2, hitbox_size.y/2), position + Vector2(hitbox_size.x/2, hitbox_size.y/2)]
+	#var hitbox_size = %CollisionShape2D.shape.size
+	var hitbox_array = [Vector2(0, 0), Vector2(viewport_size.x, 0), Vector2(viewport_size.x, viewport_size.y), Vector2(0, viewport_size.y)  ]
 	get_window().mouse_passthrough_polygon = hitbox_array
 
 	#Clamping Border logic

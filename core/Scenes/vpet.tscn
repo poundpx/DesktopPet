@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://cj20cp4rkpfpr"]
+
+[ext_resource type="Script" uid="uid://bf0tmwqrw0ih2" path="res://core/Scripts/vpet.gd" id="1_io7gx"]
+[ext_resource type="SpriteFrames" uid="uid://dc45t5g3c1xku" path="res://Animations/MudWalk.tres" id="2_io7gx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_io7gx"]
+size = Vector2(109.000015, 136.00002)
+
+[node name="Area2D" type="Area2D" unique_id=843930035]
+script = ExtResource("1_io7gx")
+walk_speed = 12
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2118960658]
+position = Vector2(8, 10.000001)
+scale = Vector2(0.2795573, 0.28604165)
+sprite_frames = ExtResource("2_io7gx")
+animation = &"Walk"
+autoplay = "Walk"
+frame_progress = 0.2539367
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1329236587]
+unique_name_in_owner = true
+scale = Vector2(0.9999999, 0.99999994)
+shape = SubResource("RectangleShape2D_io7gx")
+debug_color = Color(0.82110095, 0.0017660136, 0.96538585, 0.41960785)
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

@@ -16,7 +16,8 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	position.x += walk_direction * walk_speed * delta
+	if not is_dragging:
+		position.x += walk_direction * walk_speed * delta
 	#Clamping Border logic
 	position.x = clamp(position.x,0, viewport_size.x)
 	position.y = clamp(position.y,0, viewport_size.y - taskbar_height)
@@ -29,7 +30,7 @@ func _input(event):
 		position = Vector2(event.position.x, viewport_size.y )
 		
 	if event is InputEventMouseMotion and is_mouse_over and is_dragging:
-		position = event.position
+		position = event.position 
 		
 func _on_mouse_entered():
 	is_mouse_over = true

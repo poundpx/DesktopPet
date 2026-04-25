@@ -1,20 +1,24 @@
 {
   "main": {
-    "id": "2ca2e01234b0c58d",
+    "id": "d36211857bf06b19",
     "type": "split",
     "children": [
       {
-        "id": "95ee3b84dee60cb3",
+        "id": "b197f3c0a8bb1a86",
         "type": "tabs",
         "children": [
           {
-            "id": "8fbcbfcc41989633",
+            "id": "03c203d14e63b8b4",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Documentation/Sprite import direction.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Sprite import direction"
             }
           }
         ]
@@ -23,15 +27,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "556a43a577f0ea58",
+    "id": "d1b7c977cdfa2056",
     "type": "split",
     "children": [
       {
-        "id": "bc95edf1710d30a4",
+        "id": "5fdc9cfd107fb356",
         "type": "tabs",
         "children": [
           {
-            "id": "0b9cf14d95eab825",
+            "id": "475e515fcf239a30",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -44,7 +48,7 @@
             }
           },
           {
-            "id": "c29aaf7a6cfabcdf",
+            "id": "7fa635d975d1a2f1",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -61,7 +65,7 @@
             }
           },
           {
-            "id": "d2a58dbb069cbd71",
+            "id": "a20407dd72f5c247",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -77,19 +81,20 @@
     "width": 300
   },
   "right": {
-    "id": "2ad161f8daee1ffe",
+    "id": "0d06458f1b8b695e",
     "type": "split",
     "children": [
       {
-        "id": "a7a2e382ddd42bd8",
+        "id": "9e5aca6857903d52",
         "type": "tabs",
         "children": [
           {
-            "id": "be588a43ade48bf6",
+            "id": "a64b890f23afb4cd",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Documentation/Sprite import direction.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,24 +104,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for Sprite import direction"
             }
           },
           {
-            "id": "7b4d7bc62439e6d6",
+            "id": "e5268ec2d21988f2",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Documentation/Sprite import direction.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "Outgoing links from Sprite import direction"
             }
           },
           {
-            "id": "e193242f8c04c1b7",
+            "id": "856aea185b31896a",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -131,7 +137,7 @@
             }
           },
           {
-            "id": "98048c47b76cf311",
+            "id": "de450ac1afff3313",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -145,17 +151,18 @@
             }
           },
           {
-            "id": "f7d46f97a28c92b7",
+            "id": "d827b6455a033242",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
+                "file": "Documentation/Sprite import direction.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of Sprite import direction"
             }
           }
         ]
@@ -173,20 +180,28 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "bases:Create new base": false,
-      "obsidian-git:Open Git source control": false,
-      "obsidian-excalidraw-plugin:New drawing": false,
-      "obsidian-kanban:Create new board": false
+      "bases:Create new base": false
     }
   },
-  "active": "8fbcbfcc41989633",
+  "active": "03c203d14e63b8b4",
   "lastOpenFiles": [
-    "Untitled.canvas",
-    "core/Untitled.md",
-    "2026-04-22.md",
-    "Untitled Kanban.md",
-    "README.md",
-    "icon.svg",
-    "V pet kanban.md"
+    "Documentation/Pasted image 20260425012612.png.import",
+    "Documentation/Pasted image 20260425012612.png.import10000631296.tmp",
+    "Documentation/Pasted image 20260425012518.png.import",
+    "Documentation/Pasted image 20260425012518.png.import10000568226.tmp",
+    "Documentation/Pasted image 20260425012419.png.import",
+    "Documentation/Pasted image 20260425012419.png.import10000520371.tmp",
+    "Documentation/Pasted image 20260425012725.png.import",
+    "Documentation/Pasted image 20260425012725.png.import10000491965.tmp",
+    "Documentation/icon.svg.import",
+    "Documentation/icon.svg.import10000418611.tmp",
+    "Documentation/icon.svg",
+    "Documentation/Sprite import direction.md",
+    "Documentation",
+    "Frames/RelaxSpriteSheet.png",
+    "Documentation/Pasted image 20260425012518.png",
+    "Documentation/Pasted image 20260425012419.png",
+    "Documentation/Pasted image 20260425012725.png",
+    "Documentation/Pasted image 20260425012612.png"
   ]
 }

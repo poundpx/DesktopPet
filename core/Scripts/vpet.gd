@@ -6,8 +6,10 @@ var viewport_size = null
 var taskbar_height = 120
 var is_mouse_over = false
 var walk_direction = 1
+var isWalking = false
 
-@export var walk_speed = 10
+#increase walk speed 
+@export var walk_speed = 40
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -16,7 +18,8 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	position.x += walk_direction * walk_speed * delta
+	if not is_dragging && isWalking:
+		position.x += walk_direction * walk_speed * delta
 	#Clamping Border logic
 	position.x = clamp(position.x,0, viewport_size.x)
 	position.y = clamp(position.y,0, viewport_size.y - taskbar_height)
@@ -24,9 +27,12 @@ func _process(delta):
 func _input(event):
 	if event is InputEventMouseButton and is_mouse_over and event.is_pressed():
 		is_dragging = true
+		$FSM_Node._pick_pickup()
 	if event is InputEventMouseButton and is_mouse_over and not event.is_pressed():
 		is_dragging = false	
+		$FSM_Node._pick_interact()
 		position = Vector2(event.position.x, viewport_size.y )
+		
 		
 	if event is InputEventMouseMotion and is_mouse_over and is_dragging:
 		position = event.position

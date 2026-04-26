@@ -15,6 +15,11 @@ run/main_scene="uid://cu8h8cvle2qnr"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+PetStat="*uid://vb1ar7lcsq18"
+DataHandling="*uid://ce8fsc62pfvr4"
+
 [display]
 
 window/size/borderless=true
@@ -24,6 +29,13 @@ window/per_pixel_transparency/allowed=true
 [dotnet]
 
 project/assembly_name="VDesktopPet"
+
+[input]
+
+r={
+"deadzone": 0.2,
+"events": []
+}
 
 [physics]
 

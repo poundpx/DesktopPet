@@ -15,9 +15,9 @@ walk_speed = 12
 position = Vector2(8.110686, 10.989589)
 scale = Vector2(0.27977866, 0.28802082)
 sprite_frames = ExtResource("2_io7gx")
-animation = &"land"
+animation = &"special"
 autoplay = "idle"
-frame_progress = 0.7765772
+frame_progress = 0.57970846
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1329236587]
 unique_name_in_owner = true

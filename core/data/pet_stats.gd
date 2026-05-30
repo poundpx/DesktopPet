@@ -21,14 +21,14 @@ func _ready():
 #Its next to inspector in signal section
 func _on_drain_timer_timeout():
 	current_stars -=.1
-	print("pet current stars/health: ",current_stars)
+	#print("pet current stars/health: ",current_stars)
 
 
 #click r to reset save file reset pet stat for testing purpose
 func _input(event):
 	if event is InputEventKey and event.pressed and event.keycode == KEY_R:
 		DataHandling.reset_save()
-		print("Save file deleted! Success")
+		#print("Save file deleted! Success")
 		
 
 #save pet stats as json file
@@ -47,3 +47,13 @@ func _notification(what):
 		DataHandling.save_game()
 		get_tree().quit()	#fully close application and exist tree node scene 
 	
+
+
+func _on_pomo_button_pressed() -> void:
+	$%PomoButtonSub.visible = !$%PomoButtonSub.visible
+	if($%PomoButtonSub.visible == true):
+			$Area2D/FSM_Node._pick_pomodoro()
+	else:
+			$Area2D/FSM_Node._pick_walk()
+		
+			

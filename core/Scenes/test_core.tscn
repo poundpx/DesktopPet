@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://vb1ar7lcsq18" path="res://core/data/pet_stats.gd" id="1_o0330"]
 [ext_resource type="PackedScene" uid="uid://cj20cp4rkpfpr" path="res://core/Scenes/vpet.tscn" id="2_20u4g"]
 [ext_resource type="Script" uid="uid://dj8f8p1hojo1a" path="res://core/ui/window_setup.gd" id="2_xvfk3"]
+[ext_resource type="Script" uid="uid://c242uarodwxji" path="res://core/Scenes/buttonFunction.gd" id="4_4md6w"]
 
 [node name="Node2D" type="Node2D" unique_id=942112108 groups=["Pet"]]
 script = ExtResource("1_o0330")
@@ -11,10 +12,67 @@ script = ExtResource("1_o0330")
 script = ExtResource("2_xvfk3")
 
 [node name="Area2D" parent="." unique_id=843930035 instance=ExtResource("2_20u4g")]
-position = Vector2(-1, 1)
+position = Vector2(-1, 6)
+
+[node name="Button" type="Node2D" parent="Area2D" unique_id=1697231630]
+unique_name_in_owner = true
+position = Vector2(11, -20)
+script = ExtResource("4_4md6w")
+
+[node name="PomoButton" type="Button" parent="Area2D/Button" unique_id=1790931197]
+offset_left = 39.0
+offset_top = -65.0
+offset_right = 145.0
+offset_bottom = -27.0
+theme_override_font_sizes/font_size = 13
+text = "pomo mode
+
+"
+
+[node name="PomoButtonSub" type="Node2D" parent="Area2D/Button/PomoButton" unique_id=1461245853]
+unique_name_in_owner = true
+visible = false
+
+[node name="optionMenu2" type="Button" parent="Area2D/Button/PomoButton/PomoButtonSub" unique_id=1750736058]
+offset_left = 55.0
+offset_top = 74.0
+offset_right = 97.0
+offset_bottom = 102.0
+theme_override_font_sizes/font_size = 14
+text = "-
+"
+clip_text = true
+
+[node name="optionMenu3" type="Button" parent="Area2D/Button/PomoButton/PomoButtonSub" unique_id=701555971]
+offset_left = 55.0
+offset_top = 45.0
+offset_right = 98.0
+offset_bottom = 71.0
+theme_override_font_sizes/font_size = 13
+text = "+"
+
+[node name="stop but" type="Button" parent="Area2D/Button/PomoButton/PomoButtonSub" unique_id=1710971793]
+offset_left = 7.0
+offset_top = 72.0
+offset_right = 49.0
+offset_bottom = 101.0
+theme_override_font_sizes/font_size = 11
+text = "stop
+"
+
+[node name="start but" type="Button" parent="Area2D/Button/PomoButton/PomoButtonSub" unique_id=494068953]
+offset_left = 5.0
+offset_top = 44.0
+offset_right = 50.0
+offset_bottom = 70.0
+theme_override_font_sizes/font_size = 13
+text = "start 
+"
 
 [node name="DrainTimer" type="Timer" parent="." unique_id=104643030]
 autostart = true
 script = ExtResource("1_o0330")
 
+[connection signal="child_entered_tree" from="Area2D" to="Area2D/Button" method="_on_area_2d_child_entered_tree"]
+[connection signal="pressed" from="Area2D/Button/PomoButton" to="." method="_on_pomo_button_pressed"]
 [connection signal="timeout" from="DrainTimer" to="." method="_on_drain_timer_timeout"]

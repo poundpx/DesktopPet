@@ -25,18 +25,25 @@ func _process(delta):
 	position.y = clamp(position.y,0, viewport_size.y - taskbar_height)
 
 func _input(event):
-	if event is InputEventMouseButton and is_mouse_over and event.is_pressed():
+	if event is InputEventMouseButton and is_mouse_over and event.button_index==MOUSE_BUTTON_LEFT and event.is_pressed():
 		is_dragging = true
 		$FSM_Node._pick_pickup()
-	if event is InputEventMouseButton and is_mouse_over and not event.is_pressed():
+	if event is InputEventMouseButton and is_mouse_over and event.button_index==MOUSE_BUTTON_LEFT and not event.is_pressed():
 		is_dragging = false	
 		$FSM_Node._pick_interact()
 		position = Vector2(event.position.x, viewport_size.y )
-		
+
 		
 	if event is InputEventMouseMotion and is_mouse_over and is_dragging:
 		position = event.position
-		
+	
+	#show ui
+	if event is InputEventMouseButton:
+		if event.button_index  == MOUSE_BUTTON_RIGHT and event.is_pressed():
+			$Button._toggleOption()
+			print("right mouse been select") 
+			
+				
 func _on_mouse_entered():
 	is_mouse_over = true
 	get_window().mouse_passthrough_polygon = []

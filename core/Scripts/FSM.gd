@@ -5,7 +5,8 @@ enum State {
 	WALK,
 	PICKUP,
 	DRAG,
-	INTERACT
+	INTERACT,
+	POMODORO
 }
 
 var current_state = State.IDLE
@@ -31,6 +32,8 @@ func _process(delta):
 			_state_interact()
 		State.PICKUP:
 			_state_pickup()
+		State.POMODORO:
+			_state_pomodoro()
 
 func _state_idle():
 	get_parent().isWalking = false;
@@ -63,6 +66,10 @@ func _state_drag():
 	print("Dragging commence")
 	get_parent().isWalking = false
 	anim.play("in-air")
+
+func _state_pomodoro():
+	get_parent().isWalking = false
+	anim.play("special")
 	
 		
 
@@ -89,8 +96,13 @@ func _pick_interact():
 	current_state = State.INTERACT
 	state_timer = 0.0
 	state_duration = 1.7
+	
 # for later implement
 func start_drag():
 	pass
 func stop_drag():
 	_pick_idle()
+
+func _pick_pomodoro():
+	current_state = State.POMODORO
+	

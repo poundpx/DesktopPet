@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://cqrgv8w0ppi05"]
+
+[ext_resource type="Script" uid="uid://nahkfpqj3svq" path="res://core/Scripts/pomodoro_ui.gd" id="1_sttmt"]
+
+[node name="PomodoroUI" type="PanelContainer" unique_id=142210488]
+script = ExtResource("1_sttmt")
+
+[node name="MainStack" type="VBoxContainer" parent="." unique_id=74158625]
+layout_mode = 2
+
+[node name="Row1_Modes" type="HBoxContainer" parent="MainStack" unique_id=310937670]
+layout_mode = 2
+
+[node name="Button25" type="Button" parent="MainStack/Row1_Modes" unique_id=217573551]
+layout_mode = 2
+text = "25:5"
+
+[node name="Button50" type="Button" parent="MainStack/Row1_Modes" unique_id=613542920]
+layout_mode = 2
+text = "50:10"
+
+[node name="Row2_Cycles" type="HBoxContainer" parent="MainStack" unique_id=45471034]
+layout_mode = 2
+
+[node name="MinusButton" type="Button" parent="MainStack/Row2_Cycles" unique_id=107335157]
+layout_mode = 2
+text = "-"
+
+[node name="CycleLabel" type="Label" parent="MainStack/Row2_Cycles" unique_id=1068759017]
+layout_mode = 2
+text = "4 Cycles"
+
+[node name="PlusButton" type="Button" parent="MainStack/Row2_Cycles" unique_id=1222103142]
+layout_mode = 2
+text = "+"
+
+[node name="Row3_Controls" type="HBoxContainer" parent="MainStack" unique_id=135993335]
+layout_mode = 2
+
+[node name="StartPauseButton" type="Button" parent="MainStack/Row3_Controls" unique_id=1520870288]
+layout_mode = 2
+text = "Start"
+
+[node name="CancelButton" type="Button" parent="MainStack/Row3_Controls" unique_id=1735589888]
+layout_mode = 2
+text = "Cancel"
+
+[node name="PomodoroTimer" type="Timer" parent="." unique_id=1219191883]
